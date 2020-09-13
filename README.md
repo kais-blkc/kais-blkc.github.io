@@ -1,1 +1,3 @@
-# [Click here](https://kais-blkc.github.io/practice/)
+# Main Pages
+
+*[Practice](https://kais-blkc.github.io/practice/)
