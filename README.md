@@ -1,2 +1,1 @@
-# kais-blkc.github.io
-My first project
+# [Click here](https://kais-blkc.github.io/practice/)
