@@ -81,10 +81,6 @@
   height: 100%;
 }
 
-.card-item .card-item-body .btns {
-  /* margin: 0 auto; */
-}
-
 .card-item img {
   transition: all 0.3s ease;
   /* width: 100%; */
@@ -282,5 +278,9 @@
 
   .card-modal {
     width: 90%;
+  }
+
+  .card-modal.active {
+    margin-top: 50%;
   }
 }
