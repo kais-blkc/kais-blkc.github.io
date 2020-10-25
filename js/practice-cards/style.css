@@ -1,0 +1,286 @@
+/* Scroll */
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 0px;
+}
+
+.card-modal::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff3;
+}
+
+::-webkit-scrollbar-track {
+  background: inherit;
+}
+
+/* My-container============= */
+.my-container {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1140px;
+}
+
+.header.my-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.help {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #fff;
+  cursor: pointer;
+}
+
+.help-block {
+  position: relative;
+}
+
+.help-text {
+  opacity: 0;
+  visibility: hidden;
+  max-width: 300px;
+  transition: all 0.3s ease;
+  position: absolute;
+  box-shadow: 0 0 3px #333;
+  top: 45px;
+  left: -250px;
+}
+
+.help-block:hover .help-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* CARDS======================= */
+.card-item {
+  margin: 0 1% 25px;
+  width: 23%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.card-item .card-item-body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card-item .card-item-body .btns {
+  /* margin: 0 auto; */
+}
+
+.card-item img {
+  transition: all 0.3s ease;
+  /* width: 100%; */
+  max-height: 150px;
+}
+
+.card-item:hover img {
+  transform: scale(1.1, 1.1);
+  border-radius: 5px;
+}
+
+/* ADD BTN================= */
+.add-btn {
+  width: 50px;
+  height: 50px;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  background-color: #007bff;
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  outline: none !important;
+  z-index: 9;
+}
+
+.add-btn span {
+  margin: -1px auto 0;
+  width: 90%;
+  display: block;
+  position: relative;
+  z-index: inherit;
+}
+.add-btn span::before,
+.add-btn span::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 1px;
+  background-color: #fff;
+  position: absolute;
+}
+.add-btn span::after {
+  transform: rotate(90deg);
+}
+
+.add-btn.active {
+  transform: rotate(135deg);
+  background-color: #dc3545;
+}
+
+/* FORM ================*/
+.form-overlay {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0009;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+.form-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 8;
+}
+
+.form {
+  padding: 15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  position: fixed;
+  right: 25px;
+  bottom: 35px;
+}
+
+.form.active {
+  margin: 0 auto;
+  width: 500px;
+  height: 420px;
+  border-radius: 5px;
+  position: fixed;
+  right: 50%;
+  margin-right: -250px;
+  bottom: 50%;
+  margin-bottom: -210px;
+  z-index: 9;
+}
+
+/* MODAL=============== */
+.nmodal {
+  opacity: 0;
+  visibility: hidden;
+  background-color: #0009;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.card-modal {
+  margin: -100% auto;
+  border: none;
+  width: 450px;
+  max-height: 90%;
+  overflow-y: auto;
+  transition: margin 0.5s ease;
+}
+
+.nmodal.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 100;
+}
+
+.card-modal.active {
+  margin-top: 3%;
+}
+
+.card-modal.hide {
+  margin-top: 100%;
+}
+
+.over {
+  overflow: hidden;
+}
+
+.modal-close {
+  font-size: 45px;
+  color: #fff;
+  position: absolute;
+  z-index: inherit;
+  right: 30px;
+  cursor: pointer;
+}
+
+/* MEIDA============ */
+@media (max-width: 992px) {
+  .my-container {
+    max-width: 90%;
+  }
+  .card-item {
+    width: 31%;
+  }
+}
+
+@media (max-width: 850px) {
+  .my-container {
+    justify-content: space-around;
+  }
+  .card-item {
+    width: 40%;
+  }
+}
+
+@media (max-width: 760px) {
+  .my-container {
+    max-width: 95%;
+    justify-content: center;
+  }
+
+  .card-item {
+    width: 90%;
+  }
+
+  .card-item img {
+    max-height: 100%;
+  }
+
+  .card-item .card-item-body .btns {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form.active {
+    width: 90%;
+    margin: 25% 5%;
+    right: 0;
+    bottom: 0;
+  }
+
+  .card-modal {
+    width: 90%;
+  }
+}
