@@ -1,0 +1,97 @@
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	margin-top: 100px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 25px;
+	color: #fff;
+	background: #333;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 550px;
+	border-top: 2px solid #fff;
+	border-right: 2px solid #fff;
+}
+
+h1 {
+	margin: 15px 0 0 15px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+ul li {
+	margin: 7px 0;
+	position: relative;
+	padding-left: 7px;
+}
+
+ul li::before {
+	content: '';
+	display: block;
+	width: 2px;
+	height: 100%;
+	background-color: #ffc920;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+	transition: all .4s ease;
+}
+
+a {
+	color: #ffc920;
+	text-decoration: none;
+	transition: color .4s ease;
+}
+
+ul li:hover a{
+	color: #333;
+}
+
+ul li:hover::before{
+	width: 100%;
+}
+
+.list {
+	margin-top: 50px;
+	padding: 15px;
+	width: 75%;
+	border-left: 2px solid #e3c583;
+	border-bottom: 2px solid #e3c583;
+}
+
+@media (max-width: 760px) {
+	.container {
+		width: 90%;
+	}
+
+	h1 {
+		font-size: 35px;
+	}
+
+	a {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 390px) {
+
+	h1 {
+		font-size: 26px;
+	}
+
+	a {
+		font-size: 17px;
+	}
+
+}
+
+
