@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(30, 37, 70);
+  overflow: hidden;
+}
+
+.circle {
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ffa;
+  position: absolute;
+  cursor: pointer;
+  right: 50%;
+  margin-right: -75px;
+}
+
+.circle.before_top {
+  top: -150px;
+}
+
+.circle.top {
+  top: -75px;
+}
+.circle.center {
+  top: 50%;
+  margin-top: -75px;
+}
+.circle.bottom {
+  bottom: -75px;
+}
+
+.circle.before_top.active {
+  animation-duration: 0.3s;
+  animation-name: circle_before-top;
+}
+.circle.top.active {
+  animation-duration: 0.3s;
+  animation-name: circle_top;
+}
+.circle.center.active {
+  animation-duration: 0.3s;
+  animation-name: circle_center;
+}
+.circle.bottom.active {
+  animation-duration: 0.3s;
+  animation-name: circle_bottom;
+}
+
+@keyframes circle_before-top {
+  0% {
+    top: -150px;
+  }
+  100% {
+    top: -75px;
+  }
+}
+
+@keyframes circle_top {
+  0% {
+    top: -75px;
+  }
+  100% {
+    top: 50%;
+    margin-top: -75px;
+  }
+}
+
+@keyframes circle_center {
+  0% {
+    top: 50%;
+  }
+  100% {
+    top: 100%;
+    bottom: -75px;
+  }
+}
+
+@keyframes circle_bottom {
+  0% {
+    bottom: -75px;
+  }
+  100% {
+    bottom: -150px;
+  }
+}
