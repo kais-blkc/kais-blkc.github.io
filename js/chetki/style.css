@@ -12,15 +12,16 @@ body {
 }
 
 .circle {
-  margin: 0 auto;
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background-color: #ffa;
+  background-color: #e5d835f0;
   position: absolute;
   cursor: pointer;
   right: 50%;
   margin-right: -75px;
+  box-shadow: inset 16px -20px 20px 0px #0005;
+  transition: all .3s;
 }
 
 .circle.before_top {
@@ -53,6 +54,18 @@ body {
 .circle.bottom.active {
   animation-duration: 0.3s;
   animation-name: circle_bottom;
+}
+
+.line {
+  width: 10px;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  z-index: -1;
+  box-shadow: inset 3px 0 5px #0005;
 }
 
 @keyframes circle_before-top {
