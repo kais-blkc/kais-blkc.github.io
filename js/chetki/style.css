@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: rgb(30, 37, 70);
+  background-color: #000;
   overflow: hidden;
 }
 
@@ -15,7 +15,7 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background-color: #e5d835f0;
+  background-color: #409de0f0;
   position: absolute;
   cursor: pointer;
   right: 50%;
@@ -67,6 +67,47 @@ body {
   z-index: -1;
   box-shadow: inset 3px 0 5px #0005;
 }
+
+.count {
+  color: #fff;
+  font-size: 45px;
+  font-family: Helvetica, sans-serif;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+
+.reset {
+  display: block;
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  font-size: 45px;
+  font-family: Helvetica, sans-serif;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  outline: none;
+  transition: all .3s ease;
+}
+
+.reset:hover, .reset:focus {
+  opacity: .7;
+}
+
+@media (max-width: 460px) {
+  .reset, .count {
+    font-size: 30px;
+  }
+  .reset {
+    left: 5%;
+  }
+  .count {
+    right: 5%;
+  }
+}
+
 
 @keyframes circle_before-top {
   0% {
